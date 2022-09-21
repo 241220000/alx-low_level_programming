@@ -1,27 +1,18 @@
-#include <stdio.h.
-#include "main.h"
-
-/**
- *_puts - prints a string
- * @str: string to print
- *
- *Description: prints a string
- *On success: returns no error
+/*
+ * File: 3-puts.c
+ * Auth: Brennan D Baraban
  */
 
+#include "holberton.h"
+
+/**
+ * _puts - Prints a string to stdout.
+ * @str: The string to be printed.
+ */
 void _puts(char *str)
 {
-	int i = 0;
+	while (*str)
+		_putchar(*str++);
 
-	while (*(str + i) != '\0')
-	{
-		putchar(*(str + i));
-		i++;
-	}
-	int n;
-
-	int n;
-
-	int n;
-
-        putchar(10);
+	_putchar('\n');
+}
