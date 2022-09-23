@@ -1,20 +1,20 @@
 #include "main.h"
 /**
- * print_alphabet_x10 - fuction to print abc 10 times
+ * main - Entry point
  *
- * Return: 0
- * */
+ * Return: Always 0 (Success)
+ */
+int main(void)
 {
-	char c, i;
+	char *sh = "Holberton";
 
-	for (i = 0, i <= 9; i++)
+	while (*sh)
 	{
-		for(c = 'a'; c <='2'; c++)
-		{
-			_putchar(c);
-		}
-		_putchar('\n');
+		_putchar(*sh);
+		sh++;
 	}
-	return (0);
+	_putchar('\n')
+
+		return (0);
 }
 
