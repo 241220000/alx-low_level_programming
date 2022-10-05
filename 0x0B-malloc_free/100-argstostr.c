@@ -1,47 +1,46 @@
-#include "holberton.h"
+#include "main.h"
 #include <stdlib.h>
 
 /**
- * argstostr - concatenates all the arguments of the program
- * @ac: argument count
- * @av: argument vector
- *
- * Return: pointer to new string on success
- * NULL if ac == 0 or av == NULL
- * NULL on fail
+ * argstostr - convert arguments on command line to strings
+ * @ac: int type
+ * @av: pointer to array
+ * Return: args as strings
  */
 char *argstostr(int ac, char **av)
 {
-	char *str;
-	int i, j, k, size;
+	int counter1, counter2, counter3 = 0;
+	char *strTemp;
 
 	if (ac == 0 || av == NULL)
-		return (NULL);
-
-	for (i = 0; i < ac; i++)
 	{
-		for (j = 0; av[i][j] != '\0'; j++)
-			size++;
-		size++;
+		return (NULL);
 	}
 
-	str = malloc(sizeof(char) * (size + 1));
-
-	if (str == NULL)
-		return (NULL);
-
-	k = 0;
-	for (i = 0; i < ac; i++)
+	for (counter1 = 0; counter1 < ac; counter1++)
 	{
-		for (j = 0; av[i][j] != '\0'; j++)
+		for (counter2 = 0; av[counter1][counter2] != '\0'; counter2++, counter3++)
 		{
-			str[k] = av[i][j];
-			k++;
+			;
 		}
-		str[k] = '\n';
-		k++;
 	}
-	return (str);
-}
 
+	strTemp = malloc(sizeof(char) * (counter3 + ac + 1));
+
+	if (strTemp == NULL)
+	{
+		return (NULL);
+	}
+
+	for (counter1 = 0, counter3 = 0; counter1 < ac; counter1++)
+	{
+		for (counter2 = 0; av[counter1][counter2] != '\0'; counter2++, counter3++)
+		{
+			strTemp[counter3] = av[counter1][counter2];
+		}
+		strTemp[counter3] = '\n';
+		counter3++;
+	}
+	return (strTemp);
+}
 
