@@ -1,5 +1,5 @@
-fndef CMD_MAINS_H
-#define CMD_MAINS_H
+#ifndef MAIN_H
+#define MAIN_H
 
 int rm(const char *name, int vflag, int pflag, int rflag);
 int rm_main(char *buf);
