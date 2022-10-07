@@ -1,24 +1,15 @@
-#ifndef MAIN_H
-#define MAIN_H
+#ifndef CMD_MAINS_H
+#define CMD_MAINS_H
 
-/**
- *main - header file for protoypes
- *void protoypes (void)
- *int protoypes (int)
- */
-
-void print_numbers(void);
-void print_most_numbers(void);
-void more_numbers(void);
-void print_line(int n);
-void print_diagonal(int n);
-void print_square(int size);
-void print_triangle(int size);
-void print_number(int n);
-int _putchar(char);
-int _isupper(int);
-int _isdigit(int);
-int mul(int' int);
-
-#endif /* MAIN_H */
+int rm(const char *name, int vflag, int pflag, int rflag);
+int rm_main(char *buf);
+int ls(const char *name, int aflag, int iflag, int rflag);
+int ls_main(char *buf);
+int makedir(const char *name, int vflag);
+int mkdir_main(char *buf);
+int cat(const char *name, int nflag);
+int cat_main(char *buf);
+int cd(const char *name);
+int cd_main(char *buf);
+#endif
 
