@@ -5,7 +5,7 @@
  * @format: the list of types of arguments passed to the function
  * Return: nothing
  */
-void print_all(const char * const format, ...)\
+void print_all(const char * const format, ...)
 {
 	char *s, *sep = "";
 	int i = 0;
@@ -15,7 +15,6 @@ void print_all(const char * const format, ...)\
 
 	if (format)
 	{
-
 		while (format[i])
 		{
 			switch (format[i])
@@ -41,7 +40,6 @@ void print_all(const char * const format, ...)\
 			}
 			sep = ", ";
 			i++;
-
 		}
 	}
 	printf("\n");
